@@ -1,0 +1,4 @@
+com.zenika.nc.angular.mybottles.AppModuleFactoryMachine
+com.zenika.nc.angular.mybottles.persistence.BottleRepositoryFactoryMachine
+com.zenika.nc.angular.mybottles.rest.BottleResourceFactoryMachine
+com.zenika.nc.angular.mybottles.rest.BottleResourceRouterFactoryMachine
