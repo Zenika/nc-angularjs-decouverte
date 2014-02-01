@@ -1,30 +1,31 @@
 <div class="row">
     <div class="form-group">
         <label>Entrer votre nom :</label>
-        <input type="text" class="form-control"/>
+        <input type="text" class="form-control" ng-model="yourName"/>
+
         <p>Bonjour <b>{{yourName}}</b> !!</p>
     </div>
 
     <div class="form-group">
         <label>Exercice suivant : </label>
-        <input type="checkbox"/>
+        <input type="checkbox" ng-model="displayNext"/>
     </div>
 
-    <div ng-show="false">
+    <div ng-show="displayNext">
         <h3>Prix des vacances</h3>
         <div class="form-group">
 
             <label>Transport : </label>
-            <input type="number" class="form-control"/>
+            <input type="number" class="form-control" ng-model="transport"/>
             <label>Hébergement : </label>
-            <input type="number" class="form-control"/>
+            <input type="number" class="form-control" ng-model="location"/>
             <label>Location des skis : </label>
-            <input type="number" class="form-control"/>
+            <input type="number" class="form-control" ng-model="ski"/>
             <label>Grosse bouffe : </label>
-            <input type="number" class="form-control"/>
+            <input type="number" class="form-control" ng-model="food"/>
             <label>Cout total : </label>
             <div class="input-group input-group-lg">
-                <output class="form-control"></output>
+                <output class="form-control" ng-bind="transport+location+ski+food"></output>
                 <span class="input-group-addon">€</span>
             </div>
 
