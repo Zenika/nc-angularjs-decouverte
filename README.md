@@ -37,8 +37,8 @@ Premier pas
 
 * Faire un clone de ce projet sur votre poste
 * Avec un terminal, allez dans le répertoire srv et lancé le script correspondant à votre plateforme
-** start.sh pour Linux/Mac
-** start.bat pour windows
+ * start.sh pour Linux/Mac
+ * start.bat pour windows
 * Connectez vous à l'adresse http://localhost:8080 pour vérifier le bon fonctionnement
 
 En cas de problème avec le lancement du serveur, il est possible d'utiliser start.sh help pour voir les paramètres disponibles.
@@ -48,3 +48,37 @@ Le site se compose de trois pages :
 * "Bas à sable" qui a pour but de fournir une première interface pour les fonctionnalités de base d'AngularJS
 * "Bouteilles" qui est une interface CRUD simple pour simuler une gestion de bouteilles
 * "Admin" qui offre une vue pour voir l'état du serveur et permettre de voir les différentes interfaces REST utilisable ainsi que de les tester. (admin/admin)
+
+Objectif
+========
+
+TP1 - Introduction
+------------------
+
+* Introduction a AngularJS
+* [Découverte des concepts](http://www.sitepoint.com/10-reasons-use-angularjs/)
+* Utilisation des directives :
+ * [ng-model](http://docs.angularjs.org/api/ng.directive:ngModel)
+ * [ng-bind](http://docs.angularjs.org/api/ng.directive:ngBind)
+ * [ng-show](http://docs.angularjs.org/api/ng.directive:ngShow)/[ng-hide](http://docs.angularjs.org/api/ng.directive:ngHide)
+
+TP2 - Organisation
+------------------
+
+* Oragnisation d'un projet
+* Présentation du module [NgRoute](http://docs.angularjs.org/api/ngRoute)
+* Les controlleurs
+* Directive [ng-repeat](http://docs.angularjs.org/api/ng.directive:ngRepeat)
+* Les formulaires
+
+TP3 - Filtre et directive
+-------------------------
+
+* Utilisation d'un ['filter'](http://docs.angularjs.org/api/ng.filter:filter)
+* Intégration de 2 directives dans la vue
+
+TP4 - Intégration avec un serveur REST
+--------------------------------------
+
+* Utilisation du [NgResource](http://docs.angularjs.org/api/ngResource.$resource)
+* Remplacement du controlleur actuel par un controlleur utilisant un serveur REST
