@@ -1,9 +1,10 @@
 angular.module('myBottles')
 .controller('BottleController', function BottleController($scope, $resource) {
-    //TODO Create a new Resource object
+    // Create a new Resource object
+    var Bottle = $resource('/api/bottle/:bottleId', {bottleId:'@id'});
 
-    $scope.bottles = [];
-    //TODO load bottle from REST interface with Resource object
+    // load bottle from REST interface with Resource object
+    $scope.bottles = Bottle.query();
 
     $scope.newBottle = function () {
         var bottle = {
@@ -11,20 +12,31 @@ angular.module('myBottles')
             description: '',
             rate : 1
         }
-        //TODO Create resource object from bottle
+        // Create resource object from bottle
+        $scope.currentBottle = new Bottle(bottle);
     };
 
     $scope.createBottle = function () {
-        //TODO Save current object
+        // Save current object
+        $scope.currentBottle.$save(function(bottle) {
+            $scope.currentBottle = bottle;
+            $scope.bottles = Bottle.query();
+        });
     };
 
     $scope.changeCurrentBottle = function(id) {
-        //TODO Display the bottle from id
+        // Display the bottle from id
+        $scope.currentBottle = Bottle.get({bottleId:id});
     };
 
     $scope.delete = function() {
-        //TODO Delete current object from server and upadte bottles list
-        //TODO clear view with a new bottle
+        // Delete current object from server and update bottles list
+        $scope.currentBottle.$delete(function(){
+            //refresh bottles list
+            $scope.bottles = Bottle.query();
+            // clear view with a new bottle
+            $scope.newBottle();
+        });
     };
 
     $scope.newBottle();
