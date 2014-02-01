@@ -1,5 +1,5 @@
 [
-    {'id' : 1, 'name': 'Liffe', 'description': 'Belgique', 'rate': 4},
-    {'id' : 2, 'name': 'Grimbergem', 'description': 'Belgique', 'rate' : 3},
-    {'id' : 3, 'name': '1337 Blanche', 'description': 'France', 'rate' : 1}
+    {"id" : 1, "name": "Liffe", "description": "Belgique", "rate": 4},
+    {"id" : 2, "name": "Grimbergem", "description": "Belgique", "rate" : 3},
+    {"id" : 3, "name": "1337 Blanche", "description": "France", "rate" : 1}
 ]

@@ -1,4 +1,4 @@
-angular.module('myBottles', ['ngRoute'])
+angular.module('myBottles', ['ngRoute'/*, 'Ymagik', 'SimpleRating'*//*, 'ngResource'*/])
 .config(function($routeProvider) {
     $routeProvider
         .when('/sandbox', { templateUrl : 'view/sandbox.html' })
