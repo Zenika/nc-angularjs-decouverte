@@ -1,13 +1,13 @@
 <div class="row">
     <div class="well col-md-3 form-group">
         <button class="btn btn-success center-block mb" ng-click="newBottle()">Nouvelle bouteille</button>
-        <input type="text" class="form-control mb" placeholder="Recherche..."/>
+        <input type="text" class="form-control mb" placeholder="Recherche..." ng-model="searchText"/>
 
         <div class="panel panel-primary mb">
             <div class="panel-heading">Liste des bouteilles</div>
             <ul class="list-group">
-                <li class="list-group-item" ng-repeat="bottle in bottles">
-                    <a ng-bind="bottle.name" ng-click="changeCurrentBottle(bottle.id)"></a>
+                <li class="list-group-item" ng-repeat="bottle in bottles | filter:searchText">
+                <a ng-bind="bottle.name" ng-click="changeCurrentBottle(bottle.id)"></a>
                 </li>
             </ul>
         </div>
@@ -23,9 +23,19 @@
                     <label for="description">Description</label>
                     <input class="form-control" type="text" id="description" ng-model="currentBottle.description"/>
                 </div>
+                <div class="form-group">
+                    <label>Note</label>
+
+                    <div id="rating" simple-rating rating="currentBottle.rate" rating-max="5"></div>
+                </div>
 
                 <button type="submit" class="btn btn-default">Sauvegarder</button>
             </form>
+        </div>
+        <div class="col-md-3">
+            <div ymagik picture-content="currentBottle.picture" content-type="currentBottle.contentType"
+                 default-image="'https://cdn2.iconfinder.com/data/icons/picol-vector/32/image_add-128.png'"
+                 image-width="200"></div>
         </div>
     </div>
 </div>
