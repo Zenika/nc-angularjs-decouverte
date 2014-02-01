@@ -1,9 +1,6 @@
 package com.zenika.nc.angular.mybottles;
 
-import restx.server.JettyWebServer;
 import restx.server.WebServer;
-
-import java.util.Arrays;
 
 /**
  * This class can be used to run the app.
@@ -22,7 +19,7 @@ public class AppServer {
         if( ! extractArgs(args) ) {
             return;
         }
-        WebServer server = new JettyWebServer(WEB_INF_LOCATION, WEB_APP_LOCATION, port, "0.0.0.0");
+        WebServer server = new NonBlockingJettyWebServer(WEB_INF_LOCATION, WEB_APP_LOCATION, port, "0.0.0.0");
 
         /*
          * load mode from system property if defined, or default to dev
