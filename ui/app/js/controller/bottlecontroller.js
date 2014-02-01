@@ -1,10 +1,13 @@
 angular.module('myBottles')
 .controller('BottleController', function BottleController($scope, $http) {
     $scope.bottles = [];
-
-    //TODO load bottles list from server
+    // download data from server
+    $http.get('data.json').success(function(bottles) {
+        $scope.bottles = bottles;
+    });
 
     $scope.newBottle = function () {
+        // replace current by a new empty object
         $scope.currentBottle = {
             name : '',
             description: '',
@@ -13,13 +16,17 @@ angular.module('myBottles')
     };
 
     $scope.createBottle = function () {
-        //TODO add a bottle to list
-
-        //TODO clear view to enter a new bottle
+        //if current object doesn't exist (no id), create it and give index as id
+        if( ! $scope.currentBottle.id ) {
+            $scope.currentBottle.id = $scope.bottles.length+1;
+            $scope.bottles.push($scope.currentBottle);
+        }
+        // clear view
+        $scope.newBottle();
     };
 
     $scope.changeCurrentBottle = function(id) {
-        //TODO display current bottle
+        $scope.currentBottle = $scope.bottles[id-1];
     };
 
     $scope.newBottle();
