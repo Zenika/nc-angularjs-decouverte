@@ -30,7 +30,9 @@
                 </div>
 
                 <button type="submit" class="btn btn-default">Sauvegarder</button>
-                <button type="button" class="btn btn-danger pull-right" ng-click="delete()">Supprimer</button>
+                <button type="button" class="btn btn-danger pull-right" ng-click="delete()"
+                        ng-hide="currentBottle.id == undefined">Supprimer
+                </button>
             </form>
         </div>
         <div class="col-md-3">
