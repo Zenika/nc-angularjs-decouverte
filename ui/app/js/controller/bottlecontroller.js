@@ -17,7 +17,7 @@ angular.module('myBottles')
 
     $scope.createBottle = function () {
         //if current object doesn't exist (no id), create it and give index as id
-        if( ! $scope.currentBottle.id ) {
+        if( $scope.currentBottle.id == undefined ) {
             $scope.currentBottle.id = $scope.bottles.length;
             $scope.bottles.push($scope.currentBottle);
         }
