@@ -18,7 +18,7 @@ angular.module('myBottles')
     $scope.createBottle = function () {
         //if current object doesn't exist (no id), create it and give index as id
         if( ! $scope.currentBottle.id ) {
-            $scope.currentBottle.id = $scope.bottles.length+1;
+            $scope.currentBottle.id = $scope.bottles.length;
             $scope.bottles.push($scope.currentBottle);
         }
         // clear view
@@ -26,7 +26,7 @@ angular.module('myBottles')
     };
 
     $scope.changeCurrentBottle = function(id) {
-        $scope.currentBottle = $scope.bottles[id-1];
+        $scope.currentBottle = $scope.bottles[id];
     };
 
     $scope.newBottle();
