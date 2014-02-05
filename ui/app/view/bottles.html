@@ -7,7 +7,7 @@
             <div class="panel-heading">Liste des bouteilles</div>
             <ul class="list-group">
                 <li class="list-group-item" ng-repeat="bottle in bottles | filter:searchText">
-                    <a ng-bind="bottle.name" ng-click="changeCurrentBottle(bottle.id)"></a>
+                    <a ng-bind="bottle.name" ng-click="changeCurrentBottle($index)"></a>
                 </li>
             </ul>
         </div>
