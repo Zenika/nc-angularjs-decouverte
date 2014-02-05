@@ -52,8 +52,8 @@ Le site se compose de trois pages :
 Objectif
 ========
 
-TP1 - Introduction
-------------------
+TP1 - Introduction (Branche master)
+-----------------------------------
 
 * Introduction a AngularJS
 * [Découverte des concepts](http://www.sitepoint.com/10-reasons-use-angularjs/)
@@ -65,17 +65,19 @@ TP1 - Introduction
 TP2 - Organisation
 ------------------
 
-* Oragnisation d'un projet
+* Organisation d'un projet
 * Présentation du module [NgRoute](http://docs.angularjs.org/api/ngRoute)
-* Les controlleurs
+* Les [controlleurs](http://docs.angularjs.org/guide/concepts)
 * Directive [ng-repeat](http://docs.angularjs.org/api/ng.directive:ngRepeat)
-* Les formulaires
+* Les [formulaires](http://docs.angularjs.org/guide/forms)
 
 TP3 - Filtre et directive
 -------------------------
 
 * Utilisation d'un ['filter'](http://docs.angularjs.org/api/ng.filter:filter)
 * Intégration de 2 directives dans la vue
+ * [SimpleRating](https://github.com/Taranys/simplerating) pour noter une bouteille
+ * [Ymagik](https://github.com/Taranys/ymagik) pour ajouter une image à une bouteille
 
 TP4 - Intégration avec un serveur REST
 --------------------------------------
