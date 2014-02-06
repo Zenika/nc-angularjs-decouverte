@@ -28,7 +28,7 @@ Prérequis
 =========
 
 * Un ordinateur :) Linux/Mac/Windows
-* Java en version 1.7 (Un JRE suffit sauf pour ceux qui voudrait modifier le serveur)
+* Java en version 1.7 (Un JRE suffit sauf pour ceux qui voudraient modifier le serveur)
 * Git
 * Un logiciel pour l'édition des fichiers html et js
 
@@ -45,7 +45,7 @@ En cas de problème avec le lancement du serveur, il est possible d'utiliser sta
 Des logs sont également disponibles dans le répertoire srv/logs
 
 Le site se compose de trois pages :
-* "Bas à sable" qui a pour but de fournir une première interface pour les fonctionnalités de base d'AngularJS
+* "Bac à sable" qui a pour but de fournir une première interface pour les fonctionnalités de base d'AngularJS
 * "Bouteilles" qui est une interface CRUD simple pour simuler une gestion de bouteilles
 * "Admin" qui offre une vue pour voir l'état du serveur et permettre de voir les différentes interfaces REST utilisable ainsi que de les tester. (admin/admin)
 
